@@ -1,1 +1,4 @@
-console.log('hello worlds1')
+import { hello } from './test'
+
+hello()
+console.log('again')

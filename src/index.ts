@@ -1,4 +1,4 @@
 import { hello } from './test'
 
 hello()
-console.log('again')
+console.log('againsss')

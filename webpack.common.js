@@ -1,19 +1,18 @@
-const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const path = require('path')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
   entry: './src/index.ts',
-  devtool: 'inline-source-map',
   output: {
     filename: 'main.js',
-    path: path.join(__dirname, 'build'),
+    path: path.join(__dirname, 'build')
   },
   module: {
     rules: [
       {
         test: /\.ts$/,
         use: 'ts-loader',
-        exclude: /node_modules/,
+        exclude: /node_modules/
       },
       {
         test: /\.m?js$/,
@@ -21,16 +20,15 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
+            presets: ['@babel/preset-env'],
+            cacheDirectory: true
           }
         }
       }
-    ],
+    ]
   },
   resolve: {
-    extensions: [ '.ts', '.js' ],
+    extensions: ['.ts', '.js']
   },
-  plugins: [
-    new CleanWebpackPlugin()
-  ]
-};
+  plugins: [new CleanWebpackPlugin()]
+}

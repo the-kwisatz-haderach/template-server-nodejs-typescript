@@ -3,7 +3,7 @@
     "es6": true,
     "node": true
   },
-  "extends": ["standard"],
+  "extends": ["standard", "plugin:jest/recommended"],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
@@ -13,6 +13,6 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["prettier", "@typescript-eslint"],
+  "plugins": ["prettier", "@typescript-eslint", "jest"],
   "rules": {}
 }

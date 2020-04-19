@@ -1,9 +1,20 @@
 {
   "env": {
     "es6": true,
-    "node": true
+    "node": true,
+    "jest": true
   },
-  "extends": ["standard", "plugin:jest/recommended"],
+  "extends": [
+    "standard",
+    "plugin:jest/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:promise/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"
+  ],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
@@ -13,6 +24,9 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["prettier", "@typescript-eslint", "jest"],
-  "rules": {}
+  "plugins": ["prettier", "@typescript-eslint", "jest", "import", "promise"],
+  "rules": {
+    "space-before-function-paren": "off",
+    "jest/no-mocks-import": "off"
+  }
 }
